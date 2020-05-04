@@ -1,0 +1,166 @@
+<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" id="carousel">
+  <mdb-carousel-item>
+    <div class="view w-100" id="viewPic">
+      <img class="d-block w-100" id="bannerPic" src="/assets/img/banner/pretoria.jpg" alt="Third slide">
+      <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+        <section id="banner">
+            <h2 class="h2-responsive">Create Triangles</h2>
+            <p>An application to create Triangles using different parameters</p>
+            <button mdbBtn type="button" *ngIf="!authenticated.loginSuccess" (click)="loginModal.show()" color="light" mdbWavesEffect>Login</button>
+            <button mdbBtn type="button" *ngIf="authenticated.loginSuccess" (click)="logout()" color="light" mdbWavesEffect>Logout</button>
+          </section>  
+      <h3 class="h3-responsive">Sample message</h3>
+      <p>Hello World</p>
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100" id="viewPic">
+      <img class="d-block w-100" id="bannerPic" src="/assets/img/banner/jhb.jpg" alt="Second slide">
+      <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+        <section id="banner">
+            <h2 class="h2-responsive">Create Triangles</h2>
+            <p>An application to create Triangles using different parameters</p>
+            <button mdbBtn type="button" *ngIf="!authenticated.loginSuccess" (click)="loginModal.show()" color="light" mdbWavesEffect>Login</button>
+            <button mdbBtn type="button" *ngIf="authenticated.loginSuccess" (click)="logout()" color="light" mdbWavesEffect>Logout</button>
+          </section>  
+          <h3 class="h3-responsive">Sample message</h3>
+          <p>Hello World</p>
+    </div>
+  </mdb-carousel-item>
+
+</mdb-carousel>
+
+<!-- Login Modal Starts Here  -->
+<div mdbModal #loginModal="mdbModal" class="modal fade mt-4" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true" style="overflow: scroll;">
+
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="loginModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h2 class="modal-title w-100 font-weight-bold" id="myModalLabel">Login</h2>
+      </div>
+      <div class="modal-body">
+        <div class="mt-2">
+          <div class="row">
+            <div class="col-5 md-3 mt-3">
+            Username  
+            </div>
+            <div class="col-7 md-3 mt-3">    
+            <input type="text" [(ngModel)]="username" />
+            </div> 
+          </div> 
+
+          <div class="row">
+            <div class="col-5 md-3 mt-3">
+            Password  
+            </div>
+            <div class="col-7 md-3 mt-3">    
+            <input type="password" [(ngModel)]="password" />
+            </div> 
+          </div> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn class="waves-light btnStyle text-light red" aria-label="Close" (click)="login(username, password)" (click)="loginModal.hide()" mdbWavesEffect>Login</button>
+        <button type="button" mdbBtn class="waves-light btnStyle text-light red" aria-label="Close" (click)="loginModal.hide()" mdbWavesEffect>Cancel</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- Login Modal Ends Here -->
+
+<div class="container">
+
+  <hr class="my-5">
+  <!-- Jumbotron -->
+<div class="jumbotron text-center">
+
+    <!-- Title -->
+    <h4 class="card-title h4 pb-2"><strong>PineApple</strong></h4>
+  
+    <!-- Card image -->
+    <div class="view overlay my-4 waves-light" mdbWavesEffect>
+      <img src="/assets/img/banner/ct.jpg" class="img-fluid" alt="">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+  
+    <h5 class="indigo-text h5 mb-4">Lejaka | CSIR Technical Assessment</h5>
+  
+    <p class="card-text">The following are prerequisites for taking the assessment</p>
+  
+    <!-- Linkedin -->
+    <a class="fa-lg p-2 m-2 li-ic"><mdb-icon fab icon="linkedin-in" class="grey-text"></mdb-icon></a>
+    <!-- Twitter -->
+    <a class="fa-lg p-2 m-2 tw-ic"><mdb-icon fab icon="twitter" class="grey-text"></mdb-icon></a>
+    <!-- Dribbble -->
+    <a class="fa-lg p-2 m-2 fb-ic"><mdb-icon fab icon="facebook-f" class="grey-text"></mdb-icon></a>
+    <section class="row">
+        <div class=" col-sm-6">
+          <section id="engi">
+          <a href="list.php">
+              <mdb-icon fas icon="drafting-compass"></mdb-icon>
+            <h3>Internet connection</h3>
+            </a>
+            <p>Sample text to be display regarding the component required and examples if neccessary</p>
+          </section>
+          <section id="nurs">
+          <a href="list.php">
+              <mdb-icon fas icon="user-md"></mdb-icon>
+            <h3>Access to GitLab.com</h3>
+            </a>
+            <p>Sample text to be display regarding the component required and examples if neccessary</p>
+          </section>
+        </div>
+        <div class=" col-sm-6">
+          <section id="it">
+          <a href="list.php">
+              <mdb-icon fas icon="laptop"></mdb-icon>
+            <h3> Own PC/Laptop</h3>
+            </a>
+            <p>Sample text to be display regarding the component required and examples if neccessary</p>
+          
+          </section>
+          <section id="busi"> <a href="list.php">
+              <mdb-icon fas icon="user-tie"></mdb-icon>
+            <h3>Java openJDK/oracleJDK and supported IDE</h3>
+            </a>
+            <p>Sample text to be display regarding the component required and examples if neccessary</p>
+          
+          </section>
+        </div>
+
+        <div class=" col-sm-6">
+          <section id="it">
+          <a href="list.php">
+              <mdb-icon fas icon="laptop"></mdb-icon>
+            <h3>Gradle/Maven Build tool</h3>
+            </a>
+            <p>Sample text to be display regarding the component required and examples if neccessary</p>
+          
+          </section>
+        </div>
+
+        <div class=" col-sm-6">
+          <section id="busi"> <a href="list.php">
+              <mdb-icon fas icon="user-tie"></mdb-icon>
+            <h3>Continu2 - 24 hours</h3>
+            </a>
+            <p>Sample text to be display regarding the component required and examples if neccessary</p>
+          
+          </section>
+        </div>
+      </section>
+  </div>
+  <!-- Jumbotron -->
+
+</div>

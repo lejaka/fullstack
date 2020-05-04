@@ -1,0 +1,81 @@
+<div class="container">
+
+  <hr class="my-5">
+  <!-- Jumbotron -->
+  <div class="row">
+    <div class="col-5">
+      <div class="jumbotron">
+        <h4 class="modal-title w-100" id="myModalLabel"> Create Triangle </h4>
+        <div class="row">
+        <div class="col-5 md-3 mt-3">
+        Name of Triangle  
+        </div>
+        <div class="col-7 md-3 mt-3">    
+        <input type="text" [(ngModel)]="nameOfShape" />
+        </div> 
+      </div> 
+
+
+        <div class="row">
+        <div class="col-5 md-3 mt-3">
+        Symbol 
+        </div>
+        <div class="col-7 md-3 mt-3">    
+       <input type="text" [(ngModel)]="symbolToPrint" />
+       </div> 
+       </div> 
+
+       <div class="row">
+        <div class="col-5 md-3 mt-3">
+        Number of Rows 
+        </div>  
+        <div class="col-7 md-3 mt-3">    
+       <input  type="text" [(ngModel)]="rowsToPrint"/>
+       </div>   
+      </div> 
+      <div class="row">
+        <div class="col">
+          <button mdbBtn type="button" outline="true" size="md"
+          class="btnStyle text-light float-left red" mdbWavesEffect (click)="play()"> Play
+          </button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="jumbotron text-center">
+        Triangle Output    
+        <div>
+          {{triangleResults}}
+        </div>  
+      </div>
+      <div class="jumbotron text-center" *ngIf="myTriangles.length > 0">
+        My Triangles  
+        <div>
+        <table class="table table-bordered">
+          <thead style="background-color: #ccc; color: #444;">
+            <tr>
+              <th class="font-weight-light" scope="col">#</th>
+              <th class="font-weight-light" scope="col">Name</th>
+              <th class="font-weight-light" scope="col">Rows</th>
+              <th class="font-weight-light" scope="col">Symbol</th>
+              
+
+            </tr>
+          </thead>
+          <tbody>   
+              <tr *ngFor="let triangleData of myTriangles; let x = index" style="margin-bottom: 10px;">
+                <th class="font-weight-light" scope="row">{{x + 1}}</th>
+                <td>{{ triangleData.nameOfShape }}</td>
+                <td>{{ triangleData.rowsToPrint }}</td>
+                <td>{{ triangleData.symbolToPrint }}</td>
+              </tr>
+            </tbody>
+          </table>
+       </div> 
+        
+      </div>
+    </div>
+
+</div>

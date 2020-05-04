@@ -1,0 +1,71 @@
+<div class="row">
+        <div class="col-sm-12"> 
+      <!--Navbar-->
+      <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark grey fixed-top x" [containerInside]="false">
+        <!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top x" [containerInside]="false">
+       -->
+      
+        <!-- Navbar brand -->
+        <mdb-navbar-brand><a class="navbar-brand" href="#" target="_blank">PineApple</a></mdb-navbar-brand>
+      
+        <!-- Collapsible content -->
+        <links>
+      
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+           
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown *ngIf="authenticated.loginSuccess">
+              <a dropdownToggle mdbWavesEffect type="button" (click)="visitMain()" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                My Shapes <span class="caret"></span></a>
+              <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                <a class="dropdown-item waves-light" href="#" target="_blank">One</a>
+                <a class="dropdown-item waves-light" href="#" target="_blank">Two</a>
+              </div>
+            </li>
+      
+          </ul>
+          <!-- Links -->
+      
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link">
+                <div class="btn-group" mdbDropdown>
+                  <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                      <a *ngIf="!authenticated.loginSuccess" class="dropdown-item waves-light" href="#" target="_blank">Login</a>
+                      <a *ngIf="authenticated.loginSuccess" (click)="logoff()"class="dropdown-item waves-light" href="#" target="_blank">Logoff</a>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item" *ngIf="authenticated.loginSuccess">
+                <a class="nav-link">
+                  <div class="btn-group" mdbDropdown>
+                    <mdb-icon fas icon="book" mdbDropdownToggle></mdb-icon>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                        <a *ngIf="authenticated.loginSuccess" class="dropdown-item waves-light" mdbWavesEffect href="#" target="_blank">Profile</a>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item" *ngIf="!authenticated.loginSuccess">
+                <a class="nav-link">
+                  <div class="btn-group" mdbDropdown>
+                    <mdb-icon fas icon="book" mdbDropdownToggle></mdb-icon>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                        <a *ngIf="!authenticated.loginSuccess" class="dropdown-item waves-light" mdbWavesEffect href="#" target="_blank">Register</a>
+
+                    </div>
+                  </div>
+                </a>
+              </li>
+    
+          </ul>
+        </links>
+        <!-- Collapsible content -->
+      
+      </mdb-navbar>
+      <!--/.Navbar-->
+      </div>
+      </div>
