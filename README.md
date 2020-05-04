@@ -152,7 +152,8 @@ http://localhost:8080/shapes/delete/plus12
 ## Troubleshoot  Frontend
 - Please make sure you have node and angular installed.
 - cd into the application directory
-- Run the application (using ng serve -o)
+- Run the command "npm install"
+- Run the application (using "ng serve -o" command)
 - This section is incomplete
 
 ## Home page
